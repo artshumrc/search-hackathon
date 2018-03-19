@@ -1,0 +1,1 @@
+We've already got our search engine running, but we need your help to make it better. This is definitely one of the more technically-oriented working groups. We're seeking to restructure our search algorithm using Elastic Search, so that it provides flexible, real-time results.

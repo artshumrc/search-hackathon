@@ -1,0 +1,1 @@
+We've got a lot of data - pretty much everything published in English in the eighteenth century - but it's messy. We need your help to clean it up, develop powerful new search filters, reconcile metadata with Wikidata entities, and key the search results to our library holdings. Coders are welcome, as is anyone with a hankering to dig into some library metadata!
