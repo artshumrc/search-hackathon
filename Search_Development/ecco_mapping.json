@@ -1,0 +1,47 @@
+ecco_mapping = {
+    "entry-type": {
+        "properties": {
+            "documentID":{"type": "integer"}.
+            "ecco": {
+                "type": "nested",
+                "properties": {
+                    "documentID":   {"type":    "integer"},
+                    "ESTCID":       {"type":    "string"},
+                    "unit":         {"type":    "string"},
+                    "reel":         {"type":    "integer"},
+                    "mcode":        {"type":    "string"},
+                    "pubDate":      {"type":    "date"},
+                    "releaseDate":  {"type":    "date"},
+                    "sourceBibCitation": {"type":    "string"},
+                    "sourceLibrary": {"type":    "string"},
+                    "language":     {"type":    "string"},
+                    "module":       {"type":    "string", "analyzer":   "keyword"},
+                    "documentType": {"type":    "string"},
+                    "notes":        {"type":    "string"},
+                    "authorGroup":  {"type":    "string"},
+                    "titleGroup":   {"type":    "string"},
+                    "volumeGroup":  {"type":    "string"},
+                    "imprint":      {"type":    "string"},
+                    "collation":    {"type":    "string"},
+                    "publicationPlace": {"type":    "string"},
+                    "totalPages": {"type":    "integer"}
+                    "SourceDocPath": {"type":    "string"}
+                }
+            },
+            "hollis": {
+                "type": "nested",
+                "properties": {
+                    "BIB_DOC_CHAR": {"type":    "integer"},
+                    "estcid":       {"type":    "string"},
+                    "estcid with leading zeroes": {"type":    "string"},
+                    "hollis permalink": {"type":    "string"},
+                    "TITLE_DISPLAY": {"type":    "string"},
+                    "AUTHOR": {"type":    "string"},
+                    "IMPRINT": {"type":    "string"},
+                    "HOL_TEXT": {"type":    "string"},
+                }
+            },
+            "fulltext": {"type":    "string"}
+        }
+    }
+}
