@@ -1,0 +1,7 @@
+SELECT ?person_id ?date_of_birth ?date_of_death WHERE {
+  ?person_id ?anything "Jane Collier"@en.
+  ?person_id wdt:P31 wd:Q5.
+  ?person_id wdt:P569 ?date_of_birth .
+  ?person_id wdt:P570 ?date_of_death .
+  
+}
