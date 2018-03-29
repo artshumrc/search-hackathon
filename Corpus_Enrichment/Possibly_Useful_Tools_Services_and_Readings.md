@@ -33,4 +33,4 @@ OpenRefine Reconciliation Service API: https://github.com/OpenRefine/OpenRefine/
 
 The Drawings of the Florentine Painters: From Print Catalog to Linked Open Data: http://journal.code4lib.org/articles/12902
 
-Data Munging Tools in Preparation for RDF: Catmandu and LODRefinehttp://journal.code4lib.org/articles/11013
+Data Munging Tools in Preparation for RDF: Catmandu and LODRefine: http://journal.code4lib.org/articles/11013
