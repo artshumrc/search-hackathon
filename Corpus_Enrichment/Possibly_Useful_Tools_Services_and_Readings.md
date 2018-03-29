@@ -1,4 +1,4 @@
-Feel free to add links here! Christine has thrown in a bunch of resources for matching ECCO metadata to things in HOLLIS, Wikidata, etc, but we're lacking for suggested tools and dictionaries for OCR cleanup.
+Feel free to add links here! 
 
 
 APIs, SPARQL endpoints, and data dumps
@@ -21,6 +21,8 @@ Geonames: http://www.geonames.org/export/
 
 Tools and Scripts
 =================
+
+HathiTrust DataMunging: https://github.com/tedunderwood/DataMunging
 
 Pywikibot: https://www.wikidata.org/wiki/Wikidata:Pywikibot_-_Python_3_Tutorial
 
