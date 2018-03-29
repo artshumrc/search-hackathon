@@ -1,19 +1,97 @@
-# https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Pywikibot
-import pywikibot
-from pywikibot import pagegenerators
+Wikidata Query
+English
+Query Helper  ×
 
-site = pywikibot.Site()
-repo = site.data_repository()
-query = """SELECT ?person_id ?date_of_birth ?date_of_death WHERE {
-  ?person_id ?anything "Jane Collier"@en.
+
+
+Limit
+
+1
+SELECT DISTINCT ?person_id ?gender WHERE {
+2
+  ?person_id rdfs:label "Jane Collier"@en . # to do: replace "Jane Collier" with variable for name in direct order, or some kind of clever regex?
+3
+  ?person_id rdfs:label ?name .
+4
   ?person_id wdt:P31 wd:Q5.
+5
   ?person_id wdt:P569 ?date_of_birth .
-  ?person_id wdt:P570 ?date_of_death .
-  
-FILTER ( ?date_of_death < "1 January 1800" 
-)
-}"""
-generator = pagegenerators.WikidataSPARQLPageGenerator(query, site=repo)
+6
+  ?person_id wdt:P570 ?date_of_death . 
+7
+  ?person_id wdt:P21 ?gender .
+8
+​
+9
+FILTER ( ?date_of_birth > "1690-01-01T00:00:00Z"^^xsd:dateTime ) .
+10
+FILTER ( ?date_of_death < "1870-01-01T00:00:00Z"^^xsd:dateTime ) .
+11
+}
+Image grid
+1 result in 6 ms  
+Download
+Link
+person_id
+gender
+ wd:Q6151265	 wd:Q6581072
+URL
+HTML
+Wikilink
+PHP
+JavaScript (jQuery)
+JavaScript (modern)
+Java
+Python
+Python (Pywikibot)
+Ruby
+R
+Matlab
+listeria
 
+ 
+1
+# https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Pywikibot
+2
+import pywikibot
+3
+from pywikibot import pagegenerators
+4
+​
+5
+site = pywikibot.Site()
+6
+repo = site.data_repository()
+7
+query = """SELECT DISTINCT ?person_id ?gender WHERE {
+8
+  ?person_id rdfs:label "Jane Collier"@en . # to do: replace "Jane Collier" with variable for name in direct order, or some kind of clever regex?
+9
+  ?person_id rdfs:label ?name .
+10
+  ?person_id wdt:P31 wd:Q5.
+11
+  ?person_id wdt:P569 ?date_of_birth .
+12
+  ?person_id wdt:P570 ?date_of_death . 
+13
+  ?person_id wdt:P21 ?gender .
+14
+​
+15
+FILTER ( ?date_of_birth > "1690-01-01T00:00:00Z"^^xsd:dateTime ) .
+16
+FILTER ( ?date_of_death < "1870-01-01T00:00:00Z"^^xsd:dateTime ) .
+17
+}"""
+18
+generator = pagegenerators.WikidataSPARQLPageGenerator(query, site=repo)
+19
+​
+20
 for item in generator:
+21
     print(item)
+22
+​
+
