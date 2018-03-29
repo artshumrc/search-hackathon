@@ -42,12 +42,8 @@ Github Contents
 Other groups to consult
 =======================
 
-Research Exploration (for useful metadata to acquire, in order to make robust search f
-
-filters)
+Research Exploration: for useful metadata to acquire, in order to make robust search filters
 
 Search Development
 
-Data Visualization and Analytic Tools: Your metadata will provide the basis for their
-
-tools
+Data Visualization and Analytic Tools: Your metadata will provide the basis for their tools
