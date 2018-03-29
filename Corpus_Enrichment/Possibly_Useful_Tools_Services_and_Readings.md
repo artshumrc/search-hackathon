@@ -36,11 +36,13 @@ Openrefine: http://openrefine.org/
 Readings
 ========
 
+Cleaning OCR’d text with Regular Expressions: https://programminghistorian.org/lessons/cleaning-ocrd-text-with-regular-expressions
+
 A gentle introduction to the Wikidata Query Service: https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/A_gentle_introduction_to_the_Wikidata_Query_Service
 
 Reconciling database identifiers with Wikidata: https://blogs.bodleian.ox.ac.uk/digital/2017/10/12/reconciling-database-identifiers-with-wikidata/
 
-Cleaning OCR’d text with Regular Expressions: https://programminghistorian.org/lessons/cleaning-ocrd-text-with-regular-expressions
+The Linked Data Snowball, or Why We Need Reconciliation: https://www.slideshare.net/azaroth42/linked-data-snowball-or-why-we-need-reconciliation
 
 OpenRefine Reconciliation Service API: https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
 
