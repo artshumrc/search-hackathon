@@ -17,6 +17,8 @@ Tools and Scripts
 
 Pywikibot: https://www.wikidata.org/wiki/Wikidata:Pywikibot_-_Python_3_Tutorial
 
+sparqlwrapper: https://github.com/RDFLib/sparqlwrapper
+
 Fuzzywuzzy: https://pypi.python.org/pypi/fuzzywuzzy
 
 Openrefine: http://openrefine.org/
