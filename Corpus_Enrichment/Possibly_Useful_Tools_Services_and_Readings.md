@@ -27,6 +27,8 @@ Readings
 
 A gentle introduction to the Wikidata Query Service: https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/A_gentle_introduction_to_the_Wikidata_Query_Service
 
+Reconciling database identifiers with Wikidata: https://blogs.bodleian.ox.ac.uk/digital/2017/10/12/reconciling-database-identifiers-with-wikidata/
+
 OpenRefine Reconciliation Service API: https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
 
 The Drawings of the Florentine Painters: From Print Catalog to Linked Open Data: http://journal.code4lib.org/articles/12902
