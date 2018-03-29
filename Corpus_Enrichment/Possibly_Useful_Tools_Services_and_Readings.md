@@ -17,12 +17,18 @@ Tools and Scripts
 
 Pywikibot: https://www.wikidata.org/wiki/Wikidata:Pywikibot_-_Python_3_Tutorial
 
-Openrefine: http://openrefine.org/
+Fuzzywuzzy: https://pypi.python.org/pypi/fuzzywuzzy
 
-OpenRefine Reconciliation Service API: https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
+Openrefine: http://openrefine.org/
 
 
 Readings
 ========
 
 A gentle introduction to the Wikidata Query Service: https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/A_gentle_introduction_to_the_Wikidata_Query_Service
+
+OpenRefine Reconciliation Service API: https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
+
+The Drawings of the Florentine Painters: From Print Catalog to Linked Open Data: http://journal.code4lib.org/articles/12902
+
+Data Munging Tools in Preparation for RDF: Catmandu and LODRefinehttp://journal.code4lib.org/articles/11013
