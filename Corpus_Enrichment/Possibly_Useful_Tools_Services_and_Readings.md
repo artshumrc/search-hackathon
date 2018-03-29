@@ -12,6 +12,8 @@ Wikidata SPARQL: https://query.wikidata.org/
 
 VIAF API: https://www.oclc.org/developer/develop/web-services/viaf.en.html
 
+WorldCat APIs: https://www.oclc.org/developer/develop/web-services/worldcat-search-api.en.html
+
 ISNI API: http://isni.oclc.nl/sru/DB=1.2/
 
 Geonames: http://www.geonames.org/export/
