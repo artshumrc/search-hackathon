@@ -1,3 +1,6 @@
+Feel free to add links here! Christine has thrown in a bunch of resources for matching ECCO metadata to things in HOLLIS, Wikidata, etc, but we're lacking for suggested tools and dictionaries for OCR cleanup.
+
+
 APIs, SPARQL endpoints, and data dumps
 ======================================
 
