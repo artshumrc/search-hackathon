@@ -1,0 +1,21 @@
+.booksleuth-searchsplash {
+    padding: 50px 0 0 0;
+    background-color: #fff;
+}
+.booksleuth-navbar-bg {
+    background-color: #000;
+    margin-bottom: 2rem;
+}
+.booksleuth-passage-keyword {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 3px 6px;
+    margin: 3px;
+}
+.booksleuth-passage-keyword small {
+    color: #999;
+}
+.booksleuth-passage-keyword .oi.oi-delete {
+    color: #8b0000;
+    margin-left: 3px;
+}

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    .container-fluid
+        .row
+            .col-md-3
+            .col-md-6
+                form(method="GET" action="/search/query")
+                    .row.booksleuth-searchsplash
+                        .col-md-12
+                            .input-group
+                                input.form-control(type="text" id="search-terms" name="search-terms" aria-label="Enter search terms" placeholder="Enter keywords...")
+                                .input-group-append
+                                    input.btn.btn-primary(type='submit' name='booksleuth-action' value='Search')
+                            .form-group(style="margin-top: 1rem")
+                                span(style='margin-right: 15px') Which database do you want to search?
+                                .form-check.form-check-inline
+                                    input.form-check-input#booksleuth-database-ecco(type='radio', name='booksleuth-database', value='ecco', checked='checked')
+                                    label.form-check-label(for='booksleuth-database-ecco')
+                                        | ECCO
+                                .form-check.form-check-inline
+                                    input.form-check-input#booksleuth-database-jstor(type='radio', name='booksleuth-database', value='jstor')
+                                    label.form-check-label(for='booksleuth-database-jstor')
+                                        | JSTOR
+                            .form-group(style="margin-top: 1rem")
+                                span(style="margin-right: 10px") Already know your passages?
+                                button(type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#booksleuth-passages") Load Passages
+
+                    .row.collapse#booksleuth-passages
+                        .card.card-body
+                            .form-group.booksleuth-passage
+                                label(for="booksleuth-passage1") Passage:
+                                textarea.form-control#booksleuth-passage1(name="booksleuth-passage1")
+                            .form-group
+                                button.btn.btn-secondary#booksleuth-loadpassages(type="button") Generate search terms
+                                button.btn.btn-light.float-right#booksleuth-anotherpassage(type="button") Add another passage
+
+                            #booksleuth-passage-keywords
+                            .form-group(style='margin-top: 2rem')
+                                button.btn.btn-primary#booksleuth-search-execute(type="button" style="display:none") Execute search
+            .col-md-3
+
+block scripts
+    script(src="/javascripts/vendor/handlebars.js")
+    script(src="/javascripts/splash.js")

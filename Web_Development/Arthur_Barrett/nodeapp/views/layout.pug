@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="Search large corpora of digitized texts and find specific passages directly relevant to your research")
+    title #{siteTitle}
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/stylesheets/vendor/open-iconic/font/css/open-iconic-bootstrap.css')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    block stylesheets
+  body
+    block header
+        nav.navbar.navbar-expand-md.navbar-dark.booksleuth-navbar-bg
+          .container-fluid
+            .navbar-nav
+              a.navbar-brand(href="/")= siteTitle
+              a.nav-item.nav-link(href="/", class=pageName == 'index' ? 'active' : '') Search
+              a.nav-item.nav-link(href="/tutorials", class=pageName == 'tutorials' ? 'active' : '') Tutorials
+              a.nav-item.nav-link(href="/about", class=pageName == 'about' ? 'active' : '') About
+    block content
+    block footer
+    script(src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+    block scripts
