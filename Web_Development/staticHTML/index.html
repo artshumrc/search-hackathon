@@ -1,0 +1,126 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="icon" href="image/favicon.ico">
+
+        <title>Concipere</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <!-- Latest compiled and miified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Custom and BEM style -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--Font awesome-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/">
+        <link rel="mask-icon" color="#5bbad5" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/safari-pinned-tab.svg">
+        <meta name="theme-color" content="#ffffff">
+
+        <style>
+            body {
+                background: black url(https://github.com/artshumrc/search-hackathon/blob/696a2db19e6427eb7bda60367efe77bd72e8140b/Web_Development/staticHTML/conceptSearchBackgrouynd.png?raw=true) no-repeat center center fixed;
+                background-size: cover;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="main_wrapper">
+
+
+            <!-- Fixed navbar -->
+            <!-- Referenced from here: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                      </button>
+                        <a href="https://www.harvard.edu/" target="_blank" class="navbar-brand navbar-brand--harvardLogo" id="" alt="" title="">
+                            <img src="img/HarvardUniversity_Horizontal_Large_Shield_Reverse_RGB.png" alt="" width="150px" height="50px">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Text and video tutorials on concept search</a></li>
+                                        <li><a href="#">Video demonstration of how to perform a search</a></li>
+                                        <li><a href="#">Video describing how to evaluate your results</a></li>
+                                    </ul>
+                                </li>
+                            <li><a class="navbar__link" href="#" title="About the concept search platform">About</a></li>
+                            <li><a class="navbar__link" href="#" title="Join the concept search team">Join our team</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="content-wrapper">
+                <div class="col-md-12" style="margin-top: 10em">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div class="HomeSearch">
+                            <form action="" class="input-group" method="get">
+                                <input autocomplete="off" class="form-control" name="query" placeholder="Enter a Passage ID" required="" type="textfield" autofocus="">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Footer Content -->
+
+            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-9" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">Brand</a></div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </body>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/assets/js/docs.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+</html>
