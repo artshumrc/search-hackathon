@@ -1,0 +1,12 @@
+PREFIX entity: <http://www.wikidata.org/entity/>
+
+SELECT DISTINCT ?gender ?image_url ?date_of_birth ?date_of_death WHERE {
+  BIND ( entity:Q295941 AS ?person_id ) # replace entity ID with variable
+  ?person_id wdt:P569 ?date_of_birth ;
+  wdt:P570 ?date_of_death .
+  
+  OPTIONAL { ?person_id wdt:P21 ?gender_id .
+           ?gender_id rdfs:label ?gender .  
+           FILTER(LANG(?gender) = "en")}
+  OPTIONAL { ?person_id wdt:P18 ?image_url . }
+}
