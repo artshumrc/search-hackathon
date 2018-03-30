@@ -6,14 +6,24 @@ from collections import Counter
 import string
 import pymongo
 import os
+import sys
 # NOTE: 'pip install dnspython' for this code to run
 
 # create word processors, i.e., stemmer, punctuation remover
 ps = PorterStemmer()
 stops = set(stopwords.words("english")) | set(stopwords.words("french")) | set(stopwords.words("german"))
 punc = str.maketrans({key: None for key in string.punctuation})
+
 # create mongo database
-client = pymongo.MongoClient("mongodb+srv://searchhackathon:searchhackathon@search-hackathon-gr4pq.mongodb.net/test")
+PATH =""
+if (sys.version_info < (3, 6)):
+    #Python below 3.6 code in this block
+    PATH ="mongodb://searchhackathon:searchhackathon@search-hackathon-shard-00-00-gr4pq.mongodb.net:27017,search-hackathon-shard-00-01-gr4pq.mongodb.net:27017,search-hackathon-shard-00-02-gr4pq.mongodb.net:27017/test?ssl=true&replicaSet=search-hackathon-shard-0&authSource=admin"
+else:   
+    #Python 3.6 code in this block
+    PATH ="mongodb+srv://searchhackathon:searchhackathon@search-hackathon-gr4pq.mongodb.net/test"
+    
+client = pymongo.MongoClient(PATH)
 db = client.test
 coll = db.collection
 
