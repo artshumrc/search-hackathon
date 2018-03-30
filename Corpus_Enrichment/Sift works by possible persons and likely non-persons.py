@@ -23,3 +23,8 @@ with open(file) as name_csv:
             possible_non_persons += [row] #to do: write a function for filtering specific stopwords, such as "company"
             #print("Is this a non-person?")
             #print(row["authorGroup"])
+
+#testing: results need work
+print("These might not be people")
+for row in possible_non_persons:
+    print(row["authorGroup"].strip())
