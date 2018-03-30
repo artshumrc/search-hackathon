@@ -1,0 +1,21 @@
+What we tried
+=============
+
+In Openrefine:
+
+1. Clustering
+2. 
+3. Wikidata recon for instances of class Q5 ("Human")
+4. TO DO: Extract IDs:
+If you get a chance to do this, here's how:
+Create a new column from the reconciled author name column ('Edit column->Add column based on this column…’)
+Name it 'Wikidata URI'
+In the GREL expression box type cell.recon.match.id
+This will result in a column of full URIs, including Wikidata IDs
+If you want to isolate the IDs ('Q' + number), create yet another column ('Edit column->Add column based on this column…’) and try out some GREL expressions to transform the text: https://github.com/OpenRefine/OpenRefine/wiki/GREL-String-Functions
+
+In Python:
+1. 
+
+In SPARQL:
+1.
