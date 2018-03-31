@@ -1,6 +1,16 @@
-.booksleuth-searchsplash {
+.booksleuth-splash-bg {
+    background: black url(../images/conceptSearchBackgrouynd.png) no-repeat center center fixed;
+    background-size: cover;
+}
+.booksleuth-searchbox {
     padding: 50px 0 0 0;
-    background-color: #fff;
+}
+#booksleuth-search {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: .25rem;
+}
+#booksleuth-passages {
+    padding: 0 2rem 2rem 2rem;
 }
 .booksleuth-navbar-bg {
     background-color: #000;

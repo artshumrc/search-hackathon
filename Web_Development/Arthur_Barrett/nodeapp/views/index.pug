@@ -4,9 +4,9 @@ block content
     .container-fluid
         .row
             .col-md-3
-            .col-md-6
+            .col-md-6#booksleuth-search
                 form(method="POST" action="/search/query")
-                    .row.booksleuth-searchsplash
+                    .row.booksleuth-searchbox
                         .col-md-12
                             .input-group
                                 input.form-control(type="text" id="search-terms" name="search-terms" aria-label="Enter search terms" placeholder="Enter keywords...")
@@ -27,26 +27,25 @@ block content
                                 button(type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#booksleuth-passages") Continue with passages
 
                     .row.collapse#booksleuth-passages
-                        .card.card-body
-                            .form-group.booksleuth-passage
-                                label(for="booksleuth-passage1") Passage:
-                                textarea.form-control#booksleuth-passage1(name="booksleuth-passage1")
-                            .form-group
-                                button.btn.btn-secondary#booksleuth-loadpassages(type="button") Find most frequent words
-                                button.btn.btn-light.float-right#booksleuth-anotherpassage(type="button") Add another passage
-                                button.btn.btn-link(type="button" data-toggle="collapse" data-target="#booksleuth-passage-search-options") Options
+                        .form-group.booksleuth-passage
+                            label(for="booksleuth-passage1") Passage:
+                            textarea.form-control#booksleuth-passage1(name="booksleuth-passage1")
+                        .form-group
+                            button.btn.btn-secondary#booksleuth-loadpassages(type="button") Find most frequent words
+                            button.btn.btn-light.float-right#booksleuth-anotherpassage(type="button") Add another passage
+                            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#booksleuth-passage-search-options") Options
 
-                            .form-group.collapse#booksleuth-passage-search-options
-                                label(for="booksleuth-max-keywords") Limit
-                                input#booksleuth-max-keywords(type="number" name="booksleuth-max-keywords" value="10" min="1" max="100")
+                        .form-group.collapse#booksleuth-passage-search-options
+                            label(for="booksleuth-max-keywords") Limit
+                            input#booksleuth-max-keywords(type="number" name="booksleuth-max-keywords" value="10" min="1" max="100")
 
-                            #booksleuth-passage-keywords
-                            #booksleuth-passage-search(style="display:none")
-                                .form-group(style='margin-top: 2rem')
-                                    .input-group
-                                        input.form-control(type="text" id="passage-search-terms" name="passage-search-terms" value="")
-                                        .input-group-append
-                                            button.btn.btn-primary#booksleuth-search-execute Execute search
+                        #booksleuth-passage-keywords
+                        #booksleuth-passage-search(style="display:none")
+                            .form-group(style='margin-top: 2rem')
+                                .input-group
+                                    input.form-control(type="text" id="passage-search-terms" name="passage-search-terms" value="")
+                                    .input-group-append
+                                        button.btn.btn-primary#booksleuth-search-execute Execute search
             .col-md-3
 
 block scripts

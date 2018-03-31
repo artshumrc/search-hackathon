@@ -9,7 +9,7 @@ html(lang="en")
     link(rel='stylesheet' href='/stylesheets/vendor/open-iconic/font/css/open-iconic-bootstrap.css')
     link(rel='stylesheet' href='/stylesheets/style.css')
     block stylesheets
-  body
+  body(class=pageName == 'index' ? 'booksleuth-splash-bg' : '')
     block header
         nav.navbar.navbar-expand-md.navbar-dark.booksleuth-navbar-bg
           .container-fluid
