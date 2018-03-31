@@ -1,5 +1,8 @@
 extends layout_page
 
 block content_page
-    h1 Search Results (TODO)
-    p Your search terms: #{query['search-terms']}
+    h1 Search Results
+    .card
+        .card-body
+            h5.card-title Your search terms:
+            p.card-text= searchTerms

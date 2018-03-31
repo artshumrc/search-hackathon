@@ -6,8 +6,12 @@ const LOOKUP_STOPWORD = STOPWORDS.reduce((dict, word, index) => {
   return dict;
 }, {});
 
-function analyze(passageTexts) {
+function analyze(passageTexts, maxKeywords) {
   let word_frequency = {};
+  maxKeywords = parseInt(maxKeywords, 10);
+  if(isNaN(maxKeywords)) {
+    maxKeywords = 10;
+  }
 
   for(let i = 0; i < passageTexts.length; i++) {
     let passageText = passageTexts[i];
@@ -46,7 +50,7 @@ function analyze(passageTexts) {
 
   return {
     frequency: word_frequency,
-    keywords: keywords
+    keywords: keywords.slice(0, maxKeywords)
   };
 }
 

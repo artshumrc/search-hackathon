@@ -5,7 +5,7 @@ block content
         .row
             .col-md-3
             .col-md-6
-                form(method="GET" action="/search/query")
+                form(method="POST" action="/search/query")
                     .row.booksleuth-searchsplash
                         .col-md-12
                             .input-group
@@ -24,7 +24,7 @@ block content
                                         | JSTOR
                             .form-group(style="margin-top: 1rem")
                                 span(style="margin-right: 10px") Already know your passages?
-                                button(type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#booksleuth-passages") Load Passages
+                                button(type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#booksleuth-passages") Continue with passages
 
                     .row.collapse#booksleuth-passages
                         .card.card-body
@@ -32,12 +32,21 @@ block content
                                 label(for="booksleuth-passage1") Passage:
                                 textarea.form-control#booksleuth-passage1(name="booksleuth-passage1")
                             .form-group
-                                button.btn.btn-secondary#booksleuth-loadpassages(type="button") Generate search terms
+                                button.btn.btn-secondary#booksleuth-loadpassages(type="button") Find most frequent words
                                 button.btn.btn-light.float-right#booksleuth-anotherpassage(type="button") Add another passage
+                                button.btn.btn-link(type="button" data-toggle="collapse" data-target="#booksleuth-passage-search-options") Options
+
+                            .form-group.collapse#booksleuth-passage-search-options
+                                label(for="booksleuth-max-keywords") Limit
+                                input#booksleuth-max-keywords(type="number" name="booksleuth-max-keywords" value="10" min="1" max="100")
 
                             #booksleuth-passage-keywords
-                            .form-group(style='margin-top: 2rem')
-                                button.btn.btn-primary#booksleuth-search-execute(type="button" style="display:none") Execute search
+                            #booksleuth-passage-search(style="display:none")
+                                .form-group(style='margin-top: 2rem')
+                                    .input-group
+                                        input.form-control(type="text" id="passage-search-terms" name="passage-search-terms" value="")
+                                        .input-group-append
+                                            button.btn.btn-primary#booksleuth-search-execute Execute search
             .col-md-3
 
 block scripts
