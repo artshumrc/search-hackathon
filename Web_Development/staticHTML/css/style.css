@@ -1,3 +1,44 @@
+/*
+* === Additional to Bootstrap, BEM-based modifiers ===
+*/
 
+/*
+* — Landing page —
+*/
+
+/* Aligning the Harvard logo with padding equal to the height of the Harvard's H */
 .navbar-brand--harvardLogo {
-margin-top: -.75em;}
+margin-top: -.5em;
+margin-bottom: -.5em;}
+
+/* Adding margin to the interface of the landing page */
+.input-group--search {
+margin-top: 5em;
+width: 30em;}
+
+/*
+* — Version page —
+*/
+
+/* Fading the background image */
+.background-version {
+  background-color: white;
+  opacity: .92;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+/* Adding margin to the interface of the version page */
+  .list-group--version {
+  margin-top: 3em;}
+
+/*
+* — Throughout —
+*/
+
+/* Top margin for headings below nav bar */
+.navbar--heading {
+margin-top: 1em;}
