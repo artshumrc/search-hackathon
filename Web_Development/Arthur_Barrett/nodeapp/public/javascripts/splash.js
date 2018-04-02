@@ -37,14 +37,14 @@
         passageTexts.push($('textarea', el).val());
       });
 
-      var maxKeywords = parseInt($('#booksleuth-max-keywords').val(), 10);
-      if(isNaN(maxKeywords)) {
-        maxKeywords = 10;
-      }
+      var passageParams = {};
+      passageParams.limit = parseInt($('input#booksleuth-passage-params-limit').val(), 10);
+      passageParams.weight = $('input[name="booksleuth-passage-params-tf"]:checked').val();
+      passageParams.stopwords = $('input#booksleuth-passage-params-stopwords').val();
 
       var postData = {
         passageTexts: passageTexts,
-        maxKeywords: maxKeywords,
+        passageParams: passageParams
       };
 
       var request = $.ajax({
@@ -60,12 +60,16 @@
         self.searchKeywords = data.keywords;
 
         var source = `
+{{#if keywords}}
 <h3>Choose the words you think are most relevant:</h3>
 <div class="booksleuth-passage-keywords">
 {{#each keywords}}
     <div class="booksleuth-passage-keyword" data-keyword="{{this}}">{{this}} <small>({{lookup ../frequency this}})</small><span class="oi oi-delete" title="delete" aria-hidden="true" style="display:none;"></span></div>
 {{/each}}
 </div>
+{{else}}
+<i class="text-secondary">Frequent word analysis did not return any results.</i>
+{{/if}}
 `;
         var template = Handlebars.compile(source);
         var $keywords = $('#booksleuth-passage-keywords');

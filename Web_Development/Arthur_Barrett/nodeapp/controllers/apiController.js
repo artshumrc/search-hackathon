@@ -7,8 +7,8 @@ controller.index = (req, res, next) => {
 };
 
 controller.loadPassages = (req, res, next) => {
-  let { passageTexts, maxKeywords } = req.body;
-  let results = passageHelper.analyze(passageTexts, maxKeywords);
+  let { passageTexts, passageParams } = req.body;
+  let results = passageHelper.analyze(passageTexts, passageParams);
   res.send(JSON.stringify(results));
 };
 

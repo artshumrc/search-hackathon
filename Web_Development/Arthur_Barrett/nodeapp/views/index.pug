@@ -27,21 +27,43 @@ block content
                                 button(type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#booksleuth-passages") Continue with passages
 
                     .row.collapse#booksleuth-passages
+                        h3 Enter your passages
                         .form-group.booksleuth-passage
                             label(for="booksleuth-passage1") Passage:
                             textarea.form-control#booksleuth-passage1(name="booksleuth-passage1")
                         .form-group
-                            button.btn.btn-secondary#booksleuth-loadpassages(type="button") Find most frequent words
-                            button.btn.btn-light.float-right#booksleuth-anotherpassage(type="button") Add another passage
-                            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#booksleuth-passage-search-options") Options
+                            button.btn.btn-outline-primary#booksleuth-loadpassages(type="button") Find most frequent words
+                            button.btn.btn-outline-secondary.float-right#booksleuth-anotherpassage(type="button") Add another passage
+                            button.btn.btn-link(type="button" data-toggle="collapse" data-target="#booksleuth-passage-params") Parameters
 
-                        .form-group.collapse#booksleuth-passage-search-options
-                            label(for="booksleuth-max-keywords") Limit
-                            input#booksleuth-max-keywords(type="number" name="booksleuth-max-keywords" value="10" min="1" max="100")
+                        .collapse#booksleuth-passage-params(style="padding: 1rem; border: 1px solid #ccc;")
+                            .form-group
+                                label(for="booksleuth-passage-params-limit")
+                                | Term limit (Max 50):
+                                input#booksleuth-passage-params-limit(type="number" name="booksleuth-passage-params-limit" value="10" min="1" max="50")
+                            .form-group
+                                label(for="booksleuth-passage-params-stopwords")
+                                | Stop words (e.g. "the if and after"):
+                                input#booksleuth-passage-params-stopwords(type="text" class="form-control" name="booksleuth-passage-params-stopwords" value="")
+                            .form-group
+                                | Term frequency weighting:
+                                .form-check
+                                    input.form-check-input#booksleuth-passage-params-tf-rawcount(type="radio", name="booksleuth-passage-params-tf" value="raw-count" checked="checked")
+                                    label.form-check-label(for="booksleuth-passage-params-tf-rawcount") Raw count
+                                .form-check
+                                    input.form-check-input#booksleuth-passage-params-tf-logcount(type="radio", name="booksleuth-passage-params-tf" value="log-count")
+                                    label.form-check-label(for="booksleuth-passage-params-tf-logcount") Logarithmically scaled count
+                                .form-check
+                                    input.form-check-input#booksleuth-passage-params-tf-doclen(type="radio", name="booksleuth-passage-params-tf" value="proportional-to-doc-len")
+                                    label.form-check-label(for="booksleuth-passage-params-tf-doclen") Term frequency with respect to text length (raw frequency divided by the number of words in the text)
 
-                        #booksleuth-passage-keywords
+                                .form-check
+                                    input.form-check-input#booksleuth-passage-params-tf-maxtf(type="radio", name="booksleuth-passage-params-tf" value="proportional-to-max-tf")
+                                    label.form-check-label(for="booksleuth-passage-params-tf-maxtf") Augmented frequency with respect to most frequent term (raw frequency divided by the raw frequency of the most occurring term)
+
+                        #booksleuth-passage-keywords(style="margin-top: 2rem;")
                         #booksleuth-passage-search(style="display:none;margin-top: 2rem;")
-                            h3 Set some paramaters
+                            h3 Set search parameters
                             .form-group
                                 span(style='margin-right: 15px') What format do you want your results?
                                 .form-check.form-check-inline
