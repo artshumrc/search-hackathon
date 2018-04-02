@@ -40,8 +40,19 @@ block content
                             input#booksleuth-max-keywords(type="number" name="booksleuth-max-keywords" value="10" min="1" max="100")
 
                         #booksleuth-passage-keywords
-                        #booksleuth-passage-search(style="display:none")
-                            .form-group(style='margin-top: 2rem')
+                        #booksleuth-passage-search(style="display:none;margin-top: 2rem;")
+                            h3 Set some paramaters
+                            .form-group
+                                span(style='margin-right: 15px') What format do you want your results?
+                                .form-check.form-check-inline
+                                    input.form-check-input#booksleuth-output-format-html(type='radio', name='booksleuth-output-format', value='html', checked='checked')
+                                    label.form-check-label(for='booksleuth-output-format-html')
+                                        | HTML
+                                .form-check.form-check-inline
+                                    input.form-check-input#booksleuth-output-format-csv(type='radio', name='booksleuth-output-format', value='csv')
+                                    label.form-check-label(for='booksleuth-output-format-csv')
+                                        | Spreadsheet
+                            .form-group
                                 .input-group
                                     input.form-control(type="text" id="passage-search-terms" name="passage-search-terms" value="")
                                     .input-group-append

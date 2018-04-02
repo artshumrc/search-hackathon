@@ -60,6 +60,7 @@
         self.searchKeywords = data.keywords;
 
         var source = `
+<h3>Choose the words you think are most relevant:</h3>
 <div class="booksleuth-passage-keywords">
 {{#each keywords}}
     <div class="booksleuth-passage-keyword" data-keyword="{{this}}">{{this}} <small>({{lookup ../frequency this}})</small><span class="oi oi-delete" title="delete" aria-hidden="true" style="display:none;"></span></div>
