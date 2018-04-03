@@ -8,6 +8,15 @@ const LOOKUP_DEFAULT_STOPWORD = DEFAULT_STOPWORDS.reduce((dict, word, index) => 
 
 const TF_WEIGHTS = ['raw-count', 'log-count', 'proportional-to-max-tf', 'proportional-to-doc-len'];
 
+/**
+ * Returns term frequency for a given text.
+ *
+ * @param text Passage text to analyze for term frequency
+ * @param normalizer Function that will normalize the text (e.g. punctuation, case, etc)
+ * @param tokenizer Function that will split the text into tokens/terms
+ * @param stopwords Array of terms that should be ignored
+ * @returns {{tf: {}, max_tf: number, doc_len}}
+ */
 function termFrequency(text, normalizer, tokenizer, stopwords) {
   let normalized_text = normalizer(text);
   let words = tokenizer(normalized_text);
@@ -32,7 +41,17 @@ function termFrequency(text, normalizer, tokenizer, stopwords) {
   return {tf: tf, max_tf: max_tf, doc_len: words.length};
 }
 
-
+/**
+ * Merges term frequency statistics from more than one text.
+ *
+ * Returns an object that maps each term to its numeric frequency,
+ * which is determined by the weighting scheme (e.g. raw count, logarithmic
+ * count, etc).
+ *
+ * @param tfs Array of term frequency statistics objects.
+ * @param weight String used to identify the weighting scheme for terms.
+ * @returns {}
+ */
 function mergeTermFrequencies(tfs, weight) {
   if(tfs.length == 0) {
     return null;
@@ -86,7 +105,13 @@ function mergeTermFrequencies(tfs, weight) {
   return tf;
 }
 
-
+/**
+ * Returns the inverse document frequency for a set of term frequency
+ * statistics associated with individual texts.
+ *
+ * @param tfs
+ * @returns {{df: {}, num_docs}}
+ */
 function inverseDocumentFrequency(tfs) {
   let df = {};
   for(let i = 0, len = tfs.length; i < len; i++) {
@@ -104,12 +129,20 @@ function applyTfIdf(tf, df) {
   let tf_idf = {};
   for(let term in tf) {
     if(!tf.hasOwnProperty(term)) { continue; }
-    tf_idf[term] = tf[term] * Math.log10(df.num_docs / df.df[term]);
+    tf_idf[term] = tf[term] * Math.log10(1 + (df.num_docs / df.df[term]));
   }
   return tf_idf;
 }
 
-
+/**
+ * Analyzes a set of passage texts and returns frequency statistics
+ * and the top keywords associated with those texts, as determined
+ * by the frequency statistics.
+ *
+ * @param passageTexts
+ * @param passageParams
+ * @returns {{frequency: {}, keywords: []}}
+ */
 function analyze(passageTexts, passageParams) {
   let weight = passageParams.weight;
   let limit = Number(passageParams.limit);
@@ -153,14 +186,17 @@ function analyze(passageTexts, passageParams) {
       return 1;
     }
   });
+  let top_terms = terms.slice(0, limit);
 
   return {
     frequency: tf,
-    keywords: terms.slice(0, limit)
+    keywords: top_terms
   };
 }
 
+
 module.exports = {
   STOPWORDS: DEFAULT_STOPWORDS,
+  TF_WEIGHTS: TF_WEIGHTS,
   analyze: analyze
 };
