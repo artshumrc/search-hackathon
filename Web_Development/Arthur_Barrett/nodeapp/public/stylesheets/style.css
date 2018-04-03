@@ -17,10 +17,15 @@
     margin-bottom: 2rem;
 }
 .booksleuth-passage-keyword {
-    display: inline-block;
     border: 1px solid #999;
     padding: 3px 6px;
     margin: 3px;
+}
+.booksleuth-passage-keyword-inline {
+    display: inline-block;
+}
+.booksleuth-passage-keyword-list {
+    display: block;
 }
 .booksleuth-passage-keyword small {
     color: #999;

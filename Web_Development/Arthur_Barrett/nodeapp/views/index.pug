@@ -60,6 +60,11 @@ block content
                                 .form-check
                                     input.form-check-input#booksleuth-passage-params-tf-maxtf(type="radio", name="booksleuth-passage-params-tf" value="proportional-to-max-tf")
                                     label.form-check-label(for="booksleuth-passage-params-tf-maxtf") Augmented frequency with respect to most frequent term (raw frequency divided by the raw frequency of the most occurring term)
+                            .form-group
+                                | Reduce the weighting of terms use frequently across the passages and boost terms that are used more infrequently (e.g. TF-IDF)?
+                                .form-check
+                                    input.form-check-input#booksleuth-passage-params-idf(type="checkbox" name="booksleuth-passage-params-idf" value="1")
+                                    label.form-check-label(for="booksleuth-passage-params-idf") Yes
 
                         #booksleuth-passage-keywords(style="margin-top: 2rem;")
                         #booksleuth-passage-search(style="display:none;margin-top: 2rem;")

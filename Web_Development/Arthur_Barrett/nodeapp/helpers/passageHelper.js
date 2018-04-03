@@ -22,9 +22,7 @@ function termFrequency(text, normalizer, tokenizer, stopwords) {
     if(word.length == 0 || LOOKUP_DEFAULT_STOPWORD[word] === true || lookup_custom_stopword[word] == true) {
       continue;
     }
-    if(!tf.hasOwnProperty(word)) {
-      tf[word] = 0;
-    }
+    if(!tf.hasOwnProperty(word)) { tf[word] = 0; }
     tf[word]++;
     if(tf[word] > max_tf) {
       max_tf = tf[word];
@@ -33,6 +31,7 @@ function termFrequency(text, normalizer, tokenizer, stopwords) {
 
   return {tf: tf, max_tf: max_tf, doc_len: words.length};
 }
+
 
 function mergeTermFrequencies(tfs, weight) {
   if(tfs.length == 0) {
@@ -55,9 +54,7 @@ function mergeTermFrequencies(tfs, weight) {
   let tf = {};
   for(let term in merge) {
     if(!merge.hasOwnProperty(term)) { continue; }
-    if(!tf.hasOwnProperty(term)) {
-      tf[term] = 0;
-    }
+    if(!tf.hasOwnProperty(term)) { tf[term] = 0; }
 
     switch(weight) {
       case 'proportional-to-max-tf':
@@ -90,10 +87,34 @@ function mergeTermFrequencies(tfs, weight) {
 }
 
 
+function inverseDocumentFrequency(tfs) {
+  let df = {};
+  for(let i = 0, len = tfs.length; i < len; i++) {
+    let tf = tfs[i].tf;
+    for(let term in tf) {
+      if(!tf.hasOwnProperty(term)) { continue; }
+      if(!df.hasOwnProperty(term)) { df[term] = 0; }
+      df[term]++;
+    }
+  }
+  return {df: df, num_docs: tfs.length};
+}
+
+function applyTfIdf(tf, df) {
+  let tf_idf = {};
+  for(let term in tf) {
+    if(!tf.hasOwnProperty(term)) { continue; }
+    tf_idf[term] = tf[term] * Math.log10(df.num_docs / df.df[term]);
+  }
+  return tf_idf;
+}
+
+
 function analyze(passageTexts, passageParams) {
   let weight = passageParams.weight;
   let limit = Number(passageParams.limit);
   let stopwords = passageParams.stopwords;
+  let useIdf = passageParams.useIdf;
 
   // validate params
   if(TF_WEIGHTS.indexOf(weight) === -1) {
@@ -115,6 +136,11 @@ function analyze(passageTexts, passageParams) {
   let tokenizer = (text) => text.split(/\s+/);
   let tfs = passageTexts.map((text) => termFrequency(text, normalizer, tokenizer, stopwords));
   let tf = mergeTermFrequencies(tfs, weight);
+  if(useIdf) {
+    let df = inverseDocumentFrequency(tfs);
+    let tf_idf = applyTfIdf(tf, df);
+    tf = tf_idf;
+  }
 
   // collect terms ordered by frequency
   let terms = Object.keys(tf);
