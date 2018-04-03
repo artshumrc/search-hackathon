@@ -62,12 +62,12 @@ function mergeTermFrequencies(tfs, weight) {
     switch(weight) {
       case 'proportional-to-max-tf':
         for(let i = 0, len = merge[term].freq.length; i < len; i++) {
-          tf[term] += ((1 / len) * (merge[term].freq[i] / merge[term].max_tf[i]));
+          tf[term] += (merge[term].freq[i] / merge[term].max_tf[i]);
         }
         break;
       case 'proportional-to-doc-len':
         for(let i = 0, len = merge[term].freq.length; i < len; i++) {
-          tf[term] += ((1 / len) * (merge[term].freq[i] / merge[term].doc_len[i]));
+          tf[term] += (merge[term].freq[i] / merge[term].doc_len[i]);
         }
         break;
       case 'log-count':
