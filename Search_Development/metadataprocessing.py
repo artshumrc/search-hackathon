@@ -5,7 +5,7 @@ import re
 
 outputdict = {}
 
-for i in range(1, 5):
+for i in [1, 3, 4]:
     with open('metadata_' + str(i) + '.csv') as metadatafile:
         filereader = csv.reader(metadatafile)
         for line in filereader:
@@ -15,7 +15,7 @@ for i in range(1, 5):
             if (documentID == '') or (documentID in outputdict) or (not documentID.isdigit()):
                 print("Error in documentID, line is: ", line)
             else:
-                documentID = int(documentID)
+                documentID = documentID
                 estcid = line[1]
                 pubDate = line[2]
                 if ((not pubDate.isdigit()) or (len(pubDate) != 8)):
@@ -24,6 +24,9 @@ for i in range(1, 5):
                 year = int(pubDate[0:4])
                 month = int(pubDate[4:6])
                 day = int(pubDate[6:8])
+                if (month < 1) or (month > 12):
+                    print("Error in pubDate ", pubDate, " line is: ", line)
+                    continue
                 pubDate = datetime.date(year, month, day)
                 finalRecon = line[6]
                 finalRecon = re.sub(r'\[\]', '', finalRecon)
@@ -48,7 +51,7 @@ for i in range(1, 5):
                 outputdict[documentID] = {
                     "documentID": documentID,
                     "estcid": estcid,
-                    "pubDate": pubDate,
+                    "pubDate": str(pubDate),
                     "finalRecon": finalRecon,
                     "gender": gender,
                     "birthFinal": birthFinal,
@@ -60,4 +63,6 @@ for i in range(1, 5):
                     "url": url
                 }
 
-print(json.dumps(outputdict, indent=2))
+# print(json.dumps(outputdict, indent=2))
+with open('metadata.json', 'w') as outfile:
+    json.dump(outputdict, outfile, indent=2)

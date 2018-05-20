@@ -31,7 +31,7 @@ stemSettings = {
             }
           }
         },
-        "documentID": { "type": "integer" },
+        "documentID": { "type": "text" },
         "estcid": { "type": "text" },
         "pubDate": { "type": "date" },
         "finalRecon": { "type": "text" },
@@ -66,7 +66,10 @@ for subdir, dirs, files in os.walk(os.getcwd() + '/data'):
 
                 text = textfile.read()
                 docid = subdir.split('/')[-1]
-                sourcedict = copy.deepcopy(metadata[docid])
+                if (docid in metadata):
+                    sourcedict = copy.deepcopy(metadata[docid])
+                else:
+                    sourcedict = {}
                 sourcedict["body"] = text
 
                 fileid = docid + "_" + filename[:-4]
