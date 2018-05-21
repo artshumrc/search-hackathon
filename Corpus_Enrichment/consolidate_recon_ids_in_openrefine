@@ -1,0 +1,10 @@
+#replace cells["column name"] with column names on your openrefine sheet, in order of precedence
+#"add column based on this column" and paste in grel expression
+
+forNonBlank( 
+  cells["authorGroup"].recon.match.id,value,value, forNonBlank( 
+    cells["reconTest"].recon.match.id,value,value, forNonBlank( 
+      cells["combined match"].recon.match.id,value,value,"" 
+    ) 
+  )
+)
