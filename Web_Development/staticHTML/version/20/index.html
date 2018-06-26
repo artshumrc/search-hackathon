@@ -1,0 +1,139 @@
+<!--Version 2.0 - Bootstrap 4-->
+<!--There are 3 UI comments on this commit-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="icon" href="image/favicon.ico">
+
+        <title>Concipere</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!--UI comment #1 - using Bootstrap 4-->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Icons -->
+        <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+<!--UI comment #2 - additional Bootstrap modifier styles-->
+        <!-- Custom and BEM style -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--Font awesome-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/">
+        <link rel="mask-icon" color="#5bbad5" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/safari-pinned-tab.svg">
+        <meta name="theme-color" content="#ffffff">
+
+        <style>
+            body {
+                background: black url(img/conceptSearchBackground.png) no-repeat center center fixed;
+                background-size: cover;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="main_wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a href="https://www.harvard.edu/" class="navbar-brand navbar-brand--harvardLogo" alt="" title="">
+                    <img src="img/HarvardUniversity_Horizontal_Large_Shield_Reverse_RGB.png" alt="" width="150px" height="50px">
+                </a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item disabled">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav justify-content-end">
+                  <li class="nav-item dropdown disabled">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Tutorial
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Text and video tutorials on concept search</a>
+                      <a class="dropdown-item" href="#">Video demonstration of how to perform a search</a>
+                      <a class="dropdown-item" href="#">Video describing how to evaluate your results</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">About <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Join our team</a>
+                  </li>
+                </ul>
+
+              </div>
+            </nav>
+
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <div class="input-group mb-3 input-group--search">
+                            <input type="text" class="form-control" placeholder="Passage ID" aria-label="Passage ID" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+<!--UI comment #3 - team-only links and information. This information will not be included in the public product-->
+        <!-- Footer Content -->
+            <footer class="footer">
+                <div class="container">
+                    <span class="text-muted footer--item"><i class="fa fa-user-secret"></i> Team's links</span>
+                    <span class="">
+                        <a href="../../img/Hackathon-conceptSearch_flow.png" target="_blank">
+                            Web and Brand design flow <i class="fa fa-picture-o"></i>
+                        </a>
+                    </span>
+                    <span class="float-right">
+                        Design version 2.0
+                    </span>
+                    <span class="float-right footer--item"><a href="../../version.html">Design history</a></span>
+                    <span class="float-right footer--item">
+                        <a href="../../img/what.png" target="_blank">
+                            How does this work? <i class="fa fa-picture-o"></i>
+                        </a>
+                    </span>
+                </div>
+            </footer>
+
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </body>
+
+
+</html>
