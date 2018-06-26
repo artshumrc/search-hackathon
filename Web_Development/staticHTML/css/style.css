@@ -9,31 +9,80 @@
 /* Aligning the Harvard logo with padding equal to the height of the Harvard's H */
 .navbar-brand--harvardLogo {
 margin-top: -.5em;
-margin-bottom: -.5em;}
+margin-bottom: -.5em;
+}
 
 /* Adding margin to the interface of the landing page */
 .input-group--search {
 margin-top: 5em;
-width: 30em;}
+width: 30em;
+}
+
+/* Adding margin to the interface of the version page */
+  .list-group--version {
+  margin-top: 3em;
+  }
 
 /*
-* — Version page —
+* — Except the landing page —
 */
+
+  body {
+  background: black url(../img/conceptSearchBackground.png) no-repeat center center fixed;
+  background-size: cover;
+  }
 
 /* Fading the background image */
 .background-version {
   background-color: white;
-  opacity: .92;
+  opacity: .85;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1; }
+  z-index: -1;
+  }
 
-/* Adding margin to the interface of the version page */
-  .list-group--version {
-  margin-top: 3em;}
+/*
+* — Throughout —
+*/
+
+/* margin-top and button spacing */
+  .marginx1 {
+  margin-top: 1em;
+  }
+
+/* margin-top spacing */
+  .marginTopx2 {
+  margin-top: 2em;
+  }
+
+/* margin-bottom spacing */
+  .marginBotx2 {
+  margin-bottom: 2em;
+  }
+
+/* margin-top spacing */
+  .jumbotron--padding {
+  padding: 1rem 1rem;
+  }
+
+/* reducing the padding */
+  .card-body--padding {
+  padding: 0.25rem;
+  }
+
+/* increasing the padding */
+  .card--padding {
+  margin: .5em -.25em;
+  }
+
+/* matching color with Bootstrap badge-warning  */
+  mark--bright {
+  padding: .2em;
+  background-color: #ffc107;
+  }
 
 /*
 * — Throughout —
