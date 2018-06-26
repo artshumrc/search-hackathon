@@ -1,4 +1,4 @@
-<!--Version 2.0 - Bootstrap 4-->
+<!--Version 3.0 - Matching wire frames-->
 <!--There are 3 UI comments on this commit-->
 
 <html lang="en">
@@ -12,14 +12,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-<!--UI comment #1 - using Bootstrap 4-->
+<!-- Bootstrap 4-->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <!-- Icons -->
         <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
-<!--UI comment #2 - additional Bootstrap modifier styles-->
+<!-- Additional Bootstrap modifier styles-->
         <!-- Custom and BEM style -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -85,22 +85,111 @@
                 </ul>
 
               </div>
-            </nav>
+            </nav><!--</Upper nav>-->
 
             <div class="container">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-auto">
-                        <div class="input-group mb-3 input-group--search">
-                            <input type="text" class="form-control" placeholder="Passage ID" aria-label="Passage ID" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">Submit</button>
-                        </div>
+                    <div class="col-md-8">
+
+<!--UI comment #1 - adding CSV upload component-->
+                        <div class="card marginTopx2">
+                            <div class="card-header">
+                                <h5>I already have a CSV file</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Upload a CSV file</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!--</CSV upload>-->
+
+<!--UI comment #2 - adding loading set-->
+                        <div class="card marginTopx2">
+                            <div class="card-header">
+                                <h5>Define Loading Set (By Keyword or Passage)</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                    <h6>
+                                                        <label for="exampleFormControlSelect1">Choose a database</label>
+                                                    </h6>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                      <option>dataBaseName1</option>
+                                                      <option>dataBaseName2</option>
+                                                      <option>dataBaseName3</option>
+                                                      <option>dataBaseName4</option>
+                                                      <option>dataBaseName5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--</card-Choose database>-->
+                                    <div class="col-sm-8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>
+                                                <label for="searchTopic">
+                                                    Provide search topics...
+                                                </label>
+                                            </h6>
+
+                                            <div class="">
+                                                <form>
+                                                    <div class="row marginx1">
+                                                        <textarea
+                                                            class="form-control"
+                                                            id="searchTopic"
+                                                            rows="1"
+                                                            placeholder="Keywords or passage(s)"></textarea>
+                                                    </div>
+                                                    <div class="row pull-right marginx1">
+
+<!--UI comment #3 - Adding margin-right to button until I find out how to horizontally align it up with the button below-->
+                                                        <a class="btn btn-primary" href="index-2.html" role="button" style="margin-right: 1em;">Submit</a>
+                                                    </div>
+                                                </form>
+                                            </div><!--</card-Search topics - Keywords or passage(s)>-->
+                                            <p>
+                                                <a href="#">How do I compile a loading set?</a>
+                                            </p>
+                                            <hr>
+                                            <div class="container">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="form-group">
+                                                            <h6>
+                                                                <label for="exampleFormControlFile1">
+                                                                    ...or upload a CSV or a Word document
+                                                                </label>
+                                                            </h6>
+                                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pull-right">
+                                                        <div class="">
+                                                            <a class="btn btn-primary" href="index-2.html" role="button">Submit</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div><!--</card-Search topics - CSV/Word upload>-->
+                                        </div>
+                                    </div>
+                                </div><!--</card-Search topics >-->
+                            </div>
+                            </div>
+                        </div><!--</loading set>-->
                     </div>
                 </div>
-            </div>
 
             </div>
-<!--UI comment #3 - team-only links and information. This information will not be included in the public product-->
+<!-- Team-only links and information. This information will not be included in the public product-->
         <!-- Footer Content -->
             <footer class="footer">
                 <div class="container">
@@ -111,7 +200,7 @@
                         </a>
                     </span>
                     <span class="float-right">
-                        Design version 2.0
+                        Design version 3.0
                     </span>
                     <span class="float-right footer--item"><a href="version.html">Design history</a></span>
                     <span class="float-right footer--item">

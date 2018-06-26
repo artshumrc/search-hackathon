@@ -44,7 +44,7 @@
     </head>
     <body>
 
-<!--UI comment # - Adding a white transparent layer to fade the backgroud image-->
+<!--Transparent layer to fade the background image-->
     <div class="background-version"></div>
         <div class="main_wrapper">
 
@@ -64,7 +64,7 @@
                   </li>
                 </ul>
 
-<!--UI comment # - disabling all but the Home link-->
+<!--Disabling all but the Home link-->
                 <ul class="navbar-nav justify-content-end">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +88,7 @@
               </div>
             </nav>
 
-<!--UI comment # - adding version history and links to previous commits-->
+<!--Version history and links to previous commits-->
             <div class="container">
                 <h3 class="navbar--heading">Design history</h3>
                 <span>
@@ -96,52 +96,72 @@
                     On any of these versions, select the "Home" link to get back to the latest version.
                 </span>
                 <div class="row">
-                    <div class="list-group list-group--version">
-                      <a href="index.html"
-                         class="list-group-item list-group-item-action flex-column align-items-start">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">Current version</h5>
-                              <small>10 changes</small>
-                          </div>
-                          <ol>
-                              <li>
-                                  Bootstrap 4.0
-                              </li>
-                              <li>
-                                  Release versions page
-                              </li>
-                              <li>
-                                  Team's links bottom nav
-                              </li>
-                              <li>
-                                  Interface
-                              </li>
-                          </ol>
-                      </a>
-                      <a href="version/10/index.html"
-                         class="list-group-item list-group-item-action flex-column align-items-start">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">v1.0</h5>
-                              <small>Initial release</small>
-                          </div>
-                          <ol>
-                              <li>
-                                  Basic layout
-                              </li>
-                              <li>
-                                  Bootstrap 3.7
-                              </li>
-                          </ol>
-                      </a>
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Current version</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">2 new pages</h6>
+                                <p class="card-text">Matched <a href="img/Hackathon-conceptSearch_wireframes.pdf" class="card-link" target="_blank">wireframes</a></p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="index.html" class="card-link">Version 3.0</a>
+                            </div>
+                        </div> <!-- / v3.0-->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>v2.0</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">10 changes</h6>
+                                <ol>
+                                    <li>
+                                        Bootstrap 4.0
+                                     </li>
+                                    <li>
+                                        Release versions page
+                                    </li>
+                                    <li>
+                                        Team's links bottom nav
+                                    </li>
+                                    <li>
+                                        Interface
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="card-footer">
+                                <a href="version/20/index.html" class="card-link">Version 2.0</a>
+                            </div>
+                        </div> <!-- / v2.0-->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>v1.0</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Initial release</h6>
+                                <ol>
+                                    <li>
+                                        Basic layout
+                                    </li>
+                                    <li>
+                                        Bootstrap 3.7
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="card-footer">
+                                <a href="version/10/index.html" class="card-link">Version 1.0</a>
+                            </div>
+                        </div> <!-- / v1.0-->
                     </div>
                 </div>
             </div>
 
-            </div>
+        </div>
 
         <!-- Footer Content -->
-            <footer class="footer">
-              <div class="container">
+        <footer class="footer">
+            <div class="container">
                 <span class="text-muted"><i class="fa fa-user-secret"></i> Team's links</span>
                 <span class="float-right disabled">Design history</span>
                     <span class="float-right footer--item">
@@ -149,30 +169,8 @@
                             How does this work? <i class="fa fa-external-link"></i>
                         </a>
                     </span>
-              </div>
-            </footer>
-
-            <!--<footer class="footer">-->
-                <!--<div class="container-fluid">-->
-                    <!--<div class="navbar-header">-->
-                        <!--<a href="#" class="navbar-brand"><i class="fa fa-user-secret"></i> Team's links</a>-->
-                    <!--</div>-->
-                    <!--<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-9">-->
-                        <!--<ul class="nav navbar-nav">-->
-                            <!--<li><a href="#" class="hidden">Link</a></li>-->
-                            <!--<li class="dropdown">-->
-                                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Versions <span class="caret"></span></a>-->
-                                <!--<ul class="dropdown-menu">-->
-                                    <!--<li><a href="version/10/index.html" target="_blank">Version 1.0 - First draft</a></li>-->
-                                <!--</ul>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</footer>-->
-
-
-        </div>
+            </div>
+        </footer>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -181,8 +179,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
     </body>
-
 
 </html>

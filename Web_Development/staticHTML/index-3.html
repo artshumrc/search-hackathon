@@ -1,0 +1,523 @@
+<!--Version 3.0 - Matching wire frames-->
+<!--There are 6 UI comments on this commit-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="icon" href="image/favicon.ico">
+
+        <title>Concipere</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!-- Bootstrap 4-->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Icons -->
+        <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+<!-- Additional Bootstrap modifier styles-->
+        <!-- Custom and BEM style -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--Font awesome-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/">
+        <link rel="mask-icon" color="#5bbad5" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/safari-pinned-tab.svg">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+
+    <body>
+
+<!--Transparent layer to fade the background image-->
+    <div class="background-version"></div>
+
+        <div class="main_wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a href="https://www.harvard.edu/" class="navbar-brand navbar-brand--harvardLogo" alt="" title="">
+                    <img src="img/HarvardUniversity_Horizontal_Large_Shield_Reverse_RGB.png" alt="" width="150px" height="50px">
+                </a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item disabled">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav justify-content-end">
+                  <li class="nav-item dropdown disabled">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Tutorial
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Text and video tutorials on concept search</a>
+                      <a class="dropdown-item" href="#">Video demonstration of how to perform a search</a>
+                      <a class="dropdown-item" href="#">Video describing how to evaluate your results</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">About <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Join our team</a>
+                  </li>
+                </ul>
+
+              </div>
+            </nav><!--</Upper nav>-->
+
+            <ul class="nav nav-pills justify-content-center marginTopx2">
+                <li class="nav-item">
+                    <a class="nav-link" href="index-4.html">View search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Download search</a>
+                </li>
+            </ul>
+
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-10">
+
+<!--UI comment #1 - Select filters from dataBaseName component-->
+                        <div class="card marginTopx2">
+                            <div class="card-header">
+                                <h5>Select filters from [dataBaseName]</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterOne
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterTwo
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterThree
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterFour
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterFive
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterSix
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterSeven
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterEight
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterNine
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterTen
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterEleven
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                filterTwelve
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                        </div><!--</Select filters from dataBaseName>-->
+
+<!--UI comment #2 - Choose another database component-->
+                        <div class="card marginTopx2">
+                            <div class="card-header">
+                                <h5>
+                                    Choose another database
+                                </h5>
+                            </div>
+                            <div class="container marginx1">
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label text-right" hidden>
+                                            Choose another database
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>dataBaseName1</option>
+                                                    <option>dataBaseName2</option>
+                                                    <option>dataBaseName3</option>
+                                                    <option>dataBaseName4</option>
+                                                    <option>dataBaseName5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button class="btn btn-primary pull-right" role="button">Add database</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!--</Choose another database>-->
+
+<!--UI comment #3 - Custom search criteria-->
+                        <div class="card marginTopx2 marginx1">
+                            <div class="card-header">
+                                <h5>
+                                    Custom search criteria
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" checked>
+                                                myFilterOne
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" checked>
+                                                myFilterTwo
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div style="white-space: nowrap;">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" checked>
+                                                myFilterThree
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--</Custom search criteria>-->
+
+<!--UI comment #4 - Add custom search criteria-->
+                        <div class="card marginTopx2 marginx1">
+                            <div class="card-header">
+                                <h5>
+                                    Add custom search criteria
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="databaseMetadata">
+                                                    Choose database/metadata category
+                                                </label>
+                                                <select class="form-control" id="databaseMetadata">
+                                                  <option>databaseMetadataCategory1</option>
+                                                  <option>databaseMetadataCategory2</option>
+                                                  <option>databaseMetadataCategory3</option>
+                                                  <option>databaseMetadataCategory4</option>
+                                                  <option>databaseMetadataCategory5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="myFilterCriteron">
+                                                    Enter filter criterion
+                                                </label>
+                                                <select class="form-control" id="myFilterCriteron">
+                                                  <option>myFilterCriteron1</option>
+                                                  <option>myFilterCriteron2</option>
+                                                  <option>myFilterCriteron3</option>
+                                                  <option>myFilterCriteron4</option>
+                                                  <option>myFilterCriteron5</option>
+                                                </select>
+                                                <select class="form-control" id="myFilterCriteron">
+                                                  <option>myFilter1</option>
+                                                  <option>myFilter2</option>
+                                                  <option>myFilter3</option>
+                                                  <option>myFilter4</option>
+                                                  <option>myFilter5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-primary pull-right" role="button">Add search criteria</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--</Add custom search criteria>-->
+
+<!--UI comment #5 - Specify Results Format-->
+                        <div class="card marginTopx2 marginx1">
+                            <div class="card-header">
+                                <h5>
+                                    Specify Results Format
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="exampleRadios" id="includeMetadata" value="option1" checked>
+                                                <label class="form-check-label" for="includeMetadata">
+                                                    Include metadata
+                                                </label>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card marginTopx2 marginx1">
+                                                <div class="card-header">
+                                                    <h6>
+                                                        File size and format
+                                                    </h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group">
+                                                                    <label for="databaseMetadata" hidden>
+                                                                        File size and format
+                                                                    </label>
+                                                                    <select class="form-control" id="databaseMetadata">
+                                                                        <option>CSV</option>
+                                                                        <option>Word</option>
+                                                                        <option>Excel</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text">
+                                                                            <input type="radio" aria-label="Radio button for following text input" name="fileSizeFormat" id="fileSizeFormat" checked>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="form-control" aria-label="Text input with radio button">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <label class="form-check-label" for="fileSizeFormat">
+                                                                    Minimum aggregate term frequency
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row marginx1">
+                                                            <div class="col-sm-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <div class="input-group-text">
+                                                                            <input type="radio" aria-label="Radio button for following text input" name="fileSizeFormat" id="fileSizeFormat">
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="form-control" aria-label="Text input with radio button">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-10">
+                                                                <label class="form-check-label" for="fileSizeFormat">
+                                                                    Size of output file in MB
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                </div>
+                                            </div><!--</File size and format panel>-->
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card marginTopx2 marginx1">
+                                                        <div class="card-header">
+                                                            <h6>
+                                                                Specify statistical measures
+                                                            </h6>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="termFrequency">
+                                                                            <label class="form-check-label" for="termFrequency">Term frequency</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="termOccurrence">
+                                                                            <label class="form-check-label" for="termOccurrence">Term occurrence</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="cosineSimilarity">
+                                                                            <label class="form-check-label" for="cosineSimilarity">Cosine similarity</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="TF-IDF">
+                                                                            <label class="form-check-label" for="TF-IDF">TF-IDF</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--</Specify statistical measures>-->
+                                                <div class="col">
+                                                    <div class="card marginTopx2 marginx1">
+                                                        <div class="card-header">
+                                                            <h6>
+                                                                Specify statistical measures
+                                                            </h6>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ParameterOne">
+                                                                            <label class="form-check-label" for="ParameterOne">ParameterOne</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ParameterTwo">
+                                                                            <label class="form-check-label" for="ParameterTwo">ParameterTwo</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ParameterThree">
+                                                                            <label class="form-check-label" for="ParameterThree">ParameterThree</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox" class="form-check-input" id="ParameterFour">
+                                                                            <label class="form-check-label" for="ParameterFour">ParameterFour</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--</Specify parameter to sort results>-->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--</Specify Results Format>-->
+
+<!--UI comment #6 - Navigation and submit buttons-->
+                        <div class="card marginBotx2">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col marginx1">
+                                            <a class="" role="button" href="index-4.html">Go to View Search</a>
+                                            <button class="btn btn-primary pull-right" role="button">Download This Search <i class="fa fa-download"></i> </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!--</Buttons>-->
+
+                    </div>
+                </div>
+
+            </div>
+<!-- Team-only links and information. This information will not be included in the public product-->
+        <!-- Footer Content -->
+            <footer class="footer">
+                <div class="container">
+                    <span class="text-muted footer--item"><i class="fa fa-user-secret"></i> Team's links</span>
+                    <span class="">
+                        <a href="img/Hackathon-conceptSearch_flow.png" target="_blank">
+                            Web and Brand design flow <i class="fa fa-picture-o"></i>
+                        </a>
+                    </span>
+                    <span class="float-right">
+                        Design version 3.0
+                    </span>
+                    <span class="float-right footer--item"><a href="version.html">Design history</a></span>
+                    <span class="float-right footer--item">
+                        <a href="img/what.png" target="_blank">
+                            How does this work? <i class="fa fa-picture-o"></i>
+                        </a>
+                    </span>
+                </div>
+            </footer>
+
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </body>
+
+
+</html>
